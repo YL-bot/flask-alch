@@ -1,6 +1,6 @@
-from jobs import Jobs
+from data.jobs import Jobs
 import data.db_session as db_session
-from users import User
+from data.users import User
 
 
 db_session.global_init("db/blogs.db")

@@ -1,4 +1,4 @@
-from users import User
+from data.users import User
 import data.db_session as db_session
 
 

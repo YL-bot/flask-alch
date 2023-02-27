@@ -1,0 +1,19 @@
+h4{
+  color: rgb(150, 150, 150);
+}
+
+h2, h3{
+  display: table;
+  margin: 0 auto;
+}
+
+h5{
+margin-left: 5%;
+}
+
+table{
+  margin: 0 auto;
+  vertical-align: middle;
+  max-width: 90%;
+}
+
