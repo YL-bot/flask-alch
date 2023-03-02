@@ -9,9 +9,13 @@ from flask import Flask, render_template
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 
+def main():
+    db_session.global_init("db/data.db")
+    app.run(port=8080, host='127.0.0.1')
+
 
 @app.route('/')
-@app.route('/index/')
+@app.route('/index')
 def table():
     db_sess = db_session.create_session()
     res = db_sess.query(Jobs).all()
@@ -25,3 +29,7 @@ def table():
         data = [job.job, team_leader, time, job.collaborators, job.is_finished]
 
     return render_template('works.html', jobs=data)
+
+
+if __name__ == '__main__':
+    main()

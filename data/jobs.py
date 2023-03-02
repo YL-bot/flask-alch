@@ -4,7 +4,7 @@ from data.db_session import SqlAlchemyBase
 
 
 class Jobs(SqlAlchemyBase):
-    tablename = "jobs"
+    __tablename__ = "jobs"
 
     id = sqlalchemy.Column(sqlalchemy.Integer, primary_key=True, autoincrement=True)
 
